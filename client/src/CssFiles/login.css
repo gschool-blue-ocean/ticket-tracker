@@ -19,14 +19,15 @@ select.input-error {
 }
 
 .logo-header {
-  font-size: 5rem;
+  font-size: 6rem;
   left: 36%;
   /* padding: 2rem 1rem; */
   /* width: 20rem; */
   margin: 3rem auto;
-  color: var(--highLight);
+  /* color: var(--highLight); */
+  color:var(--lowLight);
   padding-left: 2rem;
-  font-family: 'Primeform Pro', sans-serif;
+  font-family: 'Caveat', cursive,'Primeform Pro', sans-serif;
   /* -webkit-text-stroke: .1px var(--offBlack); */
   text-align: center;
 }
@@ -66,7 +67,13 @@ select.input-error {
   width: 20rem;
   /* border-radius: 3rem; */
   margin: 3rem auto;
-
+  /* From https://css.glass */
+  background: rgba(152, 149, 141, 0.17);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(8.7px);
+  -webkit-backdrop-filter: blur(8.7px);
+  border: 1px solid rgba(152, 149, 141, 0.61);
 }
 
 .loginEmail {
@@ -106,4 +113,10 @@ select.input-error {
   border-radius: 8px;
   box-shadow: 4px 3px 3px var(--gray);
   border: 1px solid var(--gray);
+}
+
+.login-athena {
+  display: flex;
+  width: 100vw;
+  justify-content: center;
 }

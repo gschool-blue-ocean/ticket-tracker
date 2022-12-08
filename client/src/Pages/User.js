@@ -132,10 +132,10 @@ const User = () => {
   ];
 
   const urgencyItems = [
-    { label: "1- Urgent", value: "1- Urgent" },
-    { label: "2- Priority", value: "2- Priority" },
-    { label: "3- Routine", value: "3- Routine" },
-    { label: "4- Minor", value: "4- Minor" },
+    { label: "1 - Urgent", value: "1" },
+    { label: "2 - Priority", value: "2" },
+    { label: "3 - Routine", value: "3" },
+    { label: "4 - Minor", value: "4" },
   ];
 
   return (
