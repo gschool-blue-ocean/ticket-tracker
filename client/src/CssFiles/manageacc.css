@@ -9,7 +9,7 @@
 
 
 
-.Header {
+  .Header {
     color: black;
     display: flex;
     justify-content: space-evenly;
@@ -129,6 +129,7 @@
     font-size: 1.9rem;
     /* text-decoration: underline var(--highLight); */
     padding-top: 1px;
+    margin-top: 2rem;
     margin-bottom: 2rem;
     font-family: 'Primeform Pro';
 }
