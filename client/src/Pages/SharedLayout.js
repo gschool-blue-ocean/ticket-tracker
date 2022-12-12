@@ -3,10 +3,10 @@ import Header from "../Components/Admin/header";
 
 const SharedLayout = () => {
 return (
-    <>
+    <div>
     <Header />
     <Outlet />
-    </>
+    </div>
 )
 }
 
