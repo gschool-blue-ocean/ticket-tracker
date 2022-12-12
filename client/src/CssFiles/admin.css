@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat&family=Roboto+Slab:wght@100;400&display=swap');
 
+ /* Galvanize Colors   
+    g-orange: #EA872D
+    g-green: #00808C
+  */ 
 * {
     margin: 0;
 }
@@ -39,7 +43,7 @@ body {
     /* box-shadow: 5px 5px 10px 2px; */
     /* border-radius: 10px 140px 30px 140px; */
     border: 1px solid var(--gray);
-    text-align: center;
+    /* text-align: center; */
     box-shadow: 4px 3px 3px var(--gray);
     border-radius: 8px;
     width: 20rem;
@@ -47,11 +51,12 @@ body {
 }
 
 #AdminCreateAccountBTN {
-    background-color: #40798C;
+    /* background-color: black; */
     border: none;
     border-radius: 8px;
     border-style: none;
-    background-color: var(--lowLight);
+    background-color: #0D0F4A;
+    color: white;
     cursor: pointer;
     height: 40px;
     padding: 10px 16px;
@@ -64,7 +69,7 @@ body {
 
 
 #AdminCreateAccountBTN:hover {
-    background-color: var(--highLight);
+    background-color: #EF6E47;
     cursor: pointer;
     transform: scale(1.1);
     color: white;
@@ -189,7 +194,7 @@ body {
     border: 2px solid var(--offBlack);
     width: 70rem;
     margin: auto;
-    /* background-color: rgb(170, 166, 166); */
+    /* background-color: #0D0F4A; */
     background-color: rgb(165, 161, 161);
     border-radius: 25px;
     box-shadow: 6px 5px 5px var(--gray);

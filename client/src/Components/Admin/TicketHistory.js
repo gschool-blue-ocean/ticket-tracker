@@ -60,7 +60,7 @@ const TicketHistory = () => {
                                 .includes(text.toLowerCase()) ||
                             value.priority
                                 .toLowerCase()
-                                .includes(text.toLowerCase())
+                                .includes(text.toLowerCase()) === 'Urgent'
                         ) {
                             return value;
                         }
