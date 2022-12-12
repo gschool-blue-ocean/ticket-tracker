@@ -10,7 +10,7 @@ import logo  from '../../CssFiles/Athena.svg'
 
 
 const Header = () => {
-    const { handleLogOut } = useContext(LoginContext)
+    const  handleLogOut  = useContext(LoginContext)
 
     return (
         <div className="NavBarContainer">

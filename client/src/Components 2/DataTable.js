@@ -17,7 +17,7 @@ const DataTable = ({ data, reRender }) => {
         <>
             <div id={data.user_id} className="Data_Table">
 
-                <table className="AccountTable">
+                <table className="AccountTable" title="table1">
                     <thead>
                         <tr>
                             <div className="UserNameData" scope="col"></div>
