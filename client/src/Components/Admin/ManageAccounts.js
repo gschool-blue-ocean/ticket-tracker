@@ -61,5 +61,5 @@ const ManageAccounts = () => {
 export default ManageAccounts
 // user_id SERIAL PRIMARY KEY NOT NULL,
 //     userName TEXT,
-//     accessRole TEXT,
+//      TEXT,
 //     campus_name TEXT,

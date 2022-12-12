@@ -13,6 +13,7 @@ import ManageAccounts from "./Components/Admin/ManageAccounts";
 import TicketHistory from "./Components/Admin/TicketHistory";
 import SharedLayout from "./Pages/SharedLayout";
 
+import Faq from "./Pages/Faq";
 import Login from "./Pages/Login";
 import Admin from "./Pages/Admin";
 import User from "./Pages/User";
@@ -35,7 +36,7 @@ const App = () => {
         <Routes>
 
           <Route exact path="/" element={user.isAuth ? <ProtectedRoutes user={user} /> : <Login />} />
-
+            <Route exact path="/faq" element={<Faq />} />
           <Route exact path="/admin" element={user.isAuth ? <SharedLayout /> : <Navigate to='/' /> || loggedIn ? <SharedLayout /> : <Navigate to='/'/>}>
             <Route path="/admin/TicketHistory" element={<TicketHistory />} />
             <Route path="/admin/ManageAccounts" element={<ManageAccounts />} />
