@@ -1,5 +1,0 @@
-// In your .babelrc file
-{
-    "presets": ["@babel/preset-react"]
-  }
-  

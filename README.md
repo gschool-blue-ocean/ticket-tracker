@@ -77,6 +77,44 @@ This application is set up for the following that will require editing:
 - .env file needs to be set up prior to running application
 - AWS S3 (see s3.js and .env.template if you want to config photo upload ability)
 
+# Jest unit testing
+- Run npm install @testing-library/react
+- Depencies
+    * jest
+    * @testing-library/react
+    
+- Setup 
+  * Package.json 
+    * ADD TO SCRIPTS
+      * "test": "react-scripts test --coverage"
+
+    * ADD TO DEPENDENCIES 
+        * "@testing-library/jest-dom": "^5.16.5"
+    * ADD TO END OF PACKAGE.JSON to enable tranlating jsx to javascript
+    
+    * "jest": {
+        "moduleNameMapper": {
+          "axios": "axios/dist/node/axios.cjs",
+          "preset": "@vue/cli-plugin-unit-jest",
+          "transformIgnorePatterns": [
+            "node_modules/(?!axios)"
+          ]
+        }
+      }
+
+   
+  
+- How to run Unit tests
+    - cd to client or server
+    - npm test
+    - to clear Jest test cache use the following command:
+      * npx jest --clearCache
+
+
+
+
+
+
 # Additional Resources for this Application
 
 - Express: https://expressjs.com/en/api.html

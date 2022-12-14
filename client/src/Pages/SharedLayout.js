@@ -1,5 +1,5 @@
 import { Outlet, Link } from "react-router-dom";
-import Header from "../Components/Admin/Header";
+import Header from "../Components/Admin/header";
 
 const SharedLayout = () => {
 return (
