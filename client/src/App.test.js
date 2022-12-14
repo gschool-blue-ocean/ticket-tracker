@@ -23,7 +23,7 @@ afterEach(cleanup)
 /////////////UNIT TESTS////////////////////
 describe("These are the Component tests", () => {
     test('should render the login form', async () => {
-        
+        //To render a component that utilized "useContext" you must wrap it in the LoginProvider 
         const {getAllByRole} = render(
             <LoginProvider >
                 <LoginForm />
