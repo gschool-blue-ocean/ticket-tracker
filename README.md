@@ -79,7 +79,7 @@ This application is set up for the following that will require editing:
 
 # Jest unit testing
 - Run npm install @testing-library/react
-- Depencies
+- Dependencies
     * jest
     * @testing-library/react
     
@@ -123,3 +123,4 @@ This application is set up for the following that will require editing:
 - PG: https://node-postgres.com/apis/pool
 - JWT: https://jwt.io/
 - AWS S3: https://aws.amazon.com/s3/
+- Jest: https://jestjs.io/docs/tutorial-react
