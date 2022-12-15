@@ -3,16 +3,47 @@ import { useState } from "react"
 import { BsTrash } from "react-icons/bs"
 import { FaPencilAlt } from "react-icons/fa"
 import Manage from "../Portals/ManageInput"
+// import EditableLabel from 'react-inline-edit';
+
 const DataTable = ({ data, reRender }) => {
-    // console.log(data)
-    const [open, setOpen] = useState(false)
+    console.table('id', data.user_id)
+    const [open, setOpen] = useState(false);
+    const [userName, setUserName] = useState(data.username);
+    const [emailInfo, setEmailInfo] = useState(data.email);
+
 
     const handledelete = async (id) => {
-        await axios.delete(`http://localhost:6001/admin/Account/delete/${id}`)
+        await axios.delete(`http://localhost:6001/admin/Account/delete/${id}`);
         reRender()
         // console.log(id)
         // console.log(data.user_id)
-    }
+    };
+    const editAccount = (e) => {
+        if(e.code === "Enter" || e.code === "NumpadEnter"){
+        
+        axios.patch(
+          `http://localhost:6001/admin/Accounts/edit/${data.user_id}`,
+          { userName, emailInfo }
+        );
+        // setUserName("");
+        // setEmailInfo("");
+        reRender()
+        e.target.blur()
+        }
+      };
+      const setPatchInfo = (e) => {
+            if(e.target.name === "usernameInfo"){
+                setUserName(e.target.value);
+            } else {
+                setEmailInfo(e.target.value);
+            }
+            
+            // editAccount(data.user_id);
+            
+        
+        console.log(userName, emailInfo)
+        
+      }
     return (
         <>
             <div id={data.user_id} className="Data_Table">
@@ -30,8 +61,16 @@ const DataTable = ({ data, reRender }) => {
                     </thead>
                     <tbody>
                         <tr className="AccountContainer">
-                            <div className="AccountTableCells">{data.username}</div>
-                            <div className="AccountTableCells4">{data.email}</div>
+                          
+                            
+                            <div><input id="test-input" type="text" 
+                                value={userName} name="usernameInfo" onChange={setPatchInfo} onKeyDown={editAccount}/>
+                            </div>
+                            <div><input id="test-input" type="text" 
+                               value={emailInfo} name="email" onChange={setPatchInfo} onKeyDown={editAccount}/>
+                            </div>
+                            {/* <div className="AccountTableCells">{data.username}</div>
+                            <div className="AccountTableCells4">{data.email}</div> */}
                             <div className="AccountTableCells3">{data.accessrole}</div>
                             <div className="AccountTableCells2">{data.campus_name}</div>
                             <div className="AccountTableCell5">
