@@ -53,11 +53,12 @@ adminRoute.post("/Accounts/create", async (req, res) => {
 
 adminRoute.patch("/Accounts/edit/:id", async (req, res) => {
   const { id } = req.params;
+  console.log(req.body, id)
   try {
-    const { userName } = req.body;
+    const { userName, emailInfo } = req.body;
     const { rows } = await pool.query(
-      "UPDATE accounts SET userName = $1 WHERE user_id = $2 RETURNING *;",
-      [userName, id]
+      "UPDATE accounts SET userName = $1, email=$2 WHERE user_id = $3 RETURNING *;",
+      [userName, emailInfo, id]
     );
     res.status(200).send(rows);
   } catch (err) {
