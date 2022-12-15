@@ -1,0 +1,18 @@
+version: '3.7'
+services:
+ server:
+  image: my-nodejs-app:latest
+ app:
+  image: frontend:latest
+ db:
+  image: postgres
+  environment:
+    POSTGRES_PASSWORD: docker
+    POSTGRES_USER: postgres
+    POSTGRES_DB: ticket_tracker
+    volumes: /var/lib/postgresql/data
+    Ports: 5432:5432
+    
+
+  
+

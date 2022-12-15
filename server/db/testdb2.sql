@@ -48,6 +48,17 @@ FOREIGN KEY(ticket_id) REFERENCES tickets(ticket_id) ON DELETE CASCADE,
     comment TEXT
 );
 
+CREATE TABLE faq (
+    id SERIAL PRIMARY KEY,
+    title VARCHAR(100),
+    summary TEXT
+);
+
+INSERT INTO campus(name) VALUES('Austin');
+INSERT INTO campus(name) VALUES('Dallas');
+INSERT INTO campus(name) VALUES('Houston');
+INSERT INTO campus(name) VALUES('San Antonio');
+
 INSERT INTO campus(name) VALUES('Austin');
 INSERT INTO campus(name) VALUES('Dallas');
 INSERT INTO campus(name) VALUES('Houston');
