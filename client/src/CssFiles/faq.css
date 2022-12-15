@@ -1,11 +1,11 @@
 details {
     cursor: pointer;
-    background-color: white;
-    border: .3vh solid black;
-    border-radius: 4px;
+    background-color:white;
+    border: .3vh solid #0D0F4A;
+    border-radius: 10px;
     padding: .5em .5em 0;
     margin: 3vh;
-
+    color:  #0D0F4A
 }
 
 summary {
@@ -35,9 +35,10 @@ details[open] summary {
     height: 10vh;
     display: flex;
     justify-content: space-evenly;
-    align-items: center;
+    align-items: right;
     flex-direction: column;
     align-content: center;
+    margin:3vh
 }
 
 .box {
@@ -52,11 +53,10 @@ details[open] summary {
     border: .3vh solid black;
     border-radius: 50px;
     box-sizing: border-box;
-
     font-size: 12px;
     color: black;
     outline: none;
-    transition: .5s;
+    transition: .2s;
 }
 
 .box:hover input {
@@ -68,11 +68,11 @@ details[open] summary {
 .fasfa-search {
     position: absolute;
     top: 50%;
-    left: 50%;
+    left: 2vh;
     transform: translate(-50%, -50%);
     font-size: 12px;
     color: black;
-    transition: .2s;
+    transition: 0s;
 }
 
 .box:hover .fasfa-search {
@@ -80,20 +80,5 @@ details[open] summary {
     z-index: -1;
 }
 
-/* YouTube icon */
-#ytb {
-    height: 50px;
-    width: 50px;
-    text-align: center;
-    line-height: 52px;
-    border: 2px solid transparent;
-    color: #ff1717;
-    font-size: 25px;
-    transition: 0.3s;
-}
 
-#ytb:hover {
-    border-radius: 50%;
-    border-color: #ff1717;
-    box-shadow: 0 0 10px #ff4040;
-}
+

@@ -8,7 +8,8 @@ import { FiChevronDown } from "react-icons/fi";
 import "../CssFiles/faq.css";
 import { FaSearch } from "react-icons/fa";
 
-const Faq = () => {
+const Faq = ({ user }) => {
+  console.log("this is in faq", user);
   const [faqList, setFaqList] = useState([]);
 
   const [searchTerm, setSearchTerm] = useState("");
