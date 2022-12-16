@@ -30,7 +30,7 @@ console.log(window.localStorage)
 
   return (
     <Router>
-      <div className="App">
+      <div className="App" data-testid="Appjs">
 
         <Routes>
 

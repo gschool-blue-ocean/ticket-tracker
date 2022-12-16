@@ -1,6 +1,6 @@
 ////Utilities
 import { LoginProvider } from './Contexts/loginContext';
-import { getAllByTitle, render, screen, cleanup, getByText, getByRole } from '@testing-library/react';
+import { getAllByTitle, render, screen, cleanup, getByText, getByRole, queryAllByAttribute, getByTestId } from '@testing-library/react';
 
 
 /////Components///////////////////////
@@ -8,10 +8,12 @@ import Comment from './Components/Clienttests/Comment';
 import LoginForm from './Components/Login/loginForm';
 import { DataTable } from 'primereact/datatable';
 import CreateAccount from './Components/Admin/CreateAccount';
+import App from './App';
 
 
 
 afterEach(cleanup)
+//create test that validates logout
 //create a test that validates login success
 //validate create account success
 //validate login success
@@ -29,14 +31,35 @@ describe("These are the Component tests", () => {
                 <LoginForm />
             </LoginProvider>
         );
-        const element = getAllByRole('textbox')
-        console.log(element);
+        const element = screen.getAllByRole('textbox')
+        // console.log(element);
         expect(element[0]).toBeInTheDocument();
 
     })
+    test('should render the App Component', async () => {
+        //To render a component that utilized "useContext" you must wrap it in the LoginProvider 
+        const {getByTestId} = render(
+            <LoginProvider >
+                <App />
+            </LoginProvider>
+        );
+        
+        const ID = getByTestId('Appjs')
+        
+        console.log("ID object",ID)
+        expect(ID).toBeInTheDocument();
+    })
+    test("get App by test ID", () => {
+        const {getAllByRole} = render(
+            <LoginProvider >
+                <App />
+            </LoginProvider>)
+            const role = getAllByRole('textbox')
+            console.log("role object", role);
+            expect(role[0]).toBeInTheDocument();
+    });
 
     test('should render the CreateAccount Component', async () => {
-        
         const {getAllByRole} = render(
             <LoginProvider >
                 <CreateAccount/>
@@ -45,7 +68,6 @@ describe("These are the Component tests", () => {
         const formdiv = getAllByRole('textbox')
         // console.log(element);
         expect(formdiv[0]).toBeInTheDocument();
-
     })
 
     it("div has text test text ", () => {
@@ -56,7 +78,6 @@ describe("These are the Component tests", () => {
     it("DataTable includes a table ", () => {
         const {getAllByRole} = render(<DataTable />);
         const divrole = getAllByRole('table');
-
         expect(divrole[0]).toBeInTheDocument();
         
     });
