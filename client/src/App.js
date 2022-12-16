@@ -27,11 +27,11 @@ import ProtectedRoutes from "./Components/ProtectedRoutes";
 const App = () => {
   const { user } = useContext(LoginContext)
   const loggedIn = window.localStorage.getItem('isLoggedIn')
-
+console.log(window.localStorage)
 
   return (
     <Router>
-      <div className="App">
+      <div className="App" data-testid="Appjs">
 
         <Routes>
 
