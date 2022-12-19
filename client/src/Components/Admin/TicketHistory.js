@@ -19,7 +19,7 @@ const TicketHistory = () => {
         }
         fetchData()
     }, [])
-
+    
 
     const handleChange = (e) => {
         setText(e.target.value)

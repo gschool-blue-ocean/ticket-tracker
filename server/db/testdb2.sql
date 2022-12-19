@@ -70,10 +70,10 @@ INSERT INTO accounts(userName,accessRole,campus_name,email,profilePic,password) 
 INSERT INTO accounts(userName,accessRole,campus_name,email,profilePic,password) VALUES('martha','user','Houston','user@test.com',null,'$2b$10$V6VUSc6OjNT8o/lBl6cIBO09Np0R9S8hfAvm/38.E9VLxr0GU/Nea');
 INSERT INTO accounts(userName,accessRole,campus_name,email,profilePic,password) VALUES('kyle','tech','Houston','tech2@test.com',null,'$2b$10$V6VUSc6OjNT8o/lBl6cIBO09Np0R9S8hfAvm/38.E9VLxr0GU/Nea');
 
-INSERT INTO tickets (user_id, category, descrip, assigned, priority, ETA, email, status, campus_id, create_date ,resolved) VALUES(1, 'hardware', 'doesnt work', 'someone','1','02/11/2023','test3@test.com','in progress', 1, '11/02/2022',null);
-INSERT INTO tickets (user_id, category, descrip, assigned, priority, ETA, email, status, campus_id, create_date ,resolved) VALUES(1, 'hardware', 'doesnt work', 'someone','2','02/11/2023','test3@test.com','in progress', 1, '11/02/2022',null);
-INSERT INTO tickets (user_id, category, descrip, assigned, priority, ETA, email, status, campus_id, create_date ,resolved) VALUES(2, 'hardware', 'doesnt work', 'someone','3','02/11/2023','test2@test.com','in progress', 2, '11/02/2022',null);
-INSERT INTO tickets (user_id, category, descrip, assigned, priority, ETA, email, status, campus_id, create_date ,resolved) VALUES(1, 'hardware', 'doesnt work', 'someone','4','02/11/2023','test3@test.com','in progress', 1, '11/02/2022',null);
+INSERT INTO tickets (user_id, category, descrip, assigned, priority, ETA, email, status, campus_id, create_date ,resolved) VALUES(5, 'hardware', 'doesnt work', 'someone','1','02/11/2023','test3@test.com','in progress', 1, '11/02/2022',null);
+INSERT INTO tickets (user_id, category, descrip, assigned, priority, ETA, email, status, campus_id, create_date ,resolved) VALUES(6, 'hardware', 'doesnt work', 'someone','2','02/11/2023','test3@test.com','in progress', 1, '11/02/2022',null);
+INSERT INTO tickets (user_id, category, descrip, assigned, priority, ETA, email, status, campus_id, create_date ,resolved) VALUES(7, 'hardware', 'doesnt work', 'someone','3','02/11/2023','test2@test.com','in progress', 2, '11/02/2022',null);
+INSERT INTO tickets (user_id, category, descrip, assigned, priority, ETA, email, status, campus_id, create_date ,resolved) VALUES(8, 'hardware', 'doesnt work', 'someone','4','02/11/2023','test3@test.com','in progress', 1, '11/02/2022',null);
 
 
 INSERT INTO ticket_Comments(user_id,ticket_id,comment) VALUES(1,1,'this is a ticket comment1');
@@ -118,4 +118,13 @@ INSERT INTO ticket_Comments(user_id,ticket_id,comment) VALUES(1,1,'this is a tic
 
     -- query get all comments based on ticket id
     -- select * from ticket_Comments where ticket_id = 1;
+
+INSERT INTO accounts(userName,email) VALUES('joe','admin@test.com');
+
+INSERT INTO accounts(userName,email) VALUES('billy','tech','Houston','tech@test.com',null,'$2b$10$V6VUSc6OjNT8o/lBl6cIBO09Np0R9S8hfAvm/38.E9VLxr0GU/Nea');
+INSERT INTO accounts(userName,email) VALUES('martha','user','Houston','user@test.com',null,'$2b$10$V6VUSc6OjNT8o/lBl6cIBO09Np0R9S8hfAvm/38.E9VLxr0GU/Nea');
+INSERT INTO accounts(userName,email) VALUES('kyle','tech','Houston','tech2@test.com',null,'$2b$10$V6VUSc6OjNT8o/lBl6cIBO09Np0R9S8hfAvm/38.E9VLxr0GU/Nea');
+
+INSERT INTO accounts(userName,email)
+
 

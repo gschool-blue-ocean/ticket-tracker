@@ -55,10 +55,10 @@ adminRoute.patch("/Accounts/edit/:id", async (req, res) => {
   const { id } = req.params;
   console.log(req.body, id)
   try {
-    const { userName, emailInfo } = req.body;
+    const { userName, emailInfo, accessRole, campusName } = req.body;
     const { rows } = await pool.query(
-      "UPDATE accounts SET userName = $1, email=$2 WHERE user_id = $3 RETURNING *;",
-      [userName, emailInfo, id]
+      "UPDATE accounts SET userName = $1, email=$2, accessrole=$3, campus_name=$4 WHERE user_id = $5 RETURNING *;",
+      [userName, emailInfo, accessRole, campusName, id]
     );
     res.status(200).send(rows);
   } catch (err) {
