@@ -33,8 +33,39 @@
 #test-input {
     background-color: rgb(165, 161, 161);
     border: none;
-    height: 1.5rem;
-    
+    height: 1.7rem;
+    position: relative;
+}
+#test-input-edit {
+    background-color: rgb(165, 161, 161);
+    border: 2px solid black;
+    height: 1.7rem;
+    position: relative;
+}
+.green-pencil {
+    color: rgb(9, 103, 9);
+}
+.red-pencil {
+    color: rgb(180, 17, 17);
+}
+.trash {
+    color: black;
+}
+.info-email {
+    border: 2px solid black;
+    border-radius: 10px;
+    padding: 3px;
+    background-color: white;
+    position: absolute;
+    z-index: 1;
+    left: 50px;
+}
+
+#test-input:hover {
+    color: rgb(92, 89, 89);
+}
+.discover {
+    text-align: center;
 }
 
 .AccountTable{
