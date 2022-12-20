@@ -13,6 +13,7 @@ const techRoute = require("./routes/Tech")
 const authRoute = require('./AuthRoute/register_login');
 const generateUploadURL = require('./s3.js');
 const authorizeToken = require("./AuthRoute/authToken");
+const faq = require('./routes/Faq')
 
 app.use(cors());
 app.use(express.json());
@@ -29,6 +30,7 @@ app.use("/tech", techRoute);
 app.use("/user", userRoute)
 app.use("/account", authRoute);
 app.post('/test', authorizeToken);
+app.use('/faq', faq)
 
 app.listen(port, () => {
   console.log(`listening on port ${port}`);

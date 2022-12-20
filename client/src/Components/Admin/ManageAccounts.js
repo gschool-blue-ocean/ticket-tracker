@@ -10,7 +10,7 @@ const ManageAccounts = () => {
     const [account, setAccount] = useState([])
     const [render, setRender] = useState(false)
     const [loading, setLoading] = useState(true)
-
+    console.table(account);
     useEffect(() => {
         const getDatatFromDB = async () => {
             const { data } = await axios.get("http://localhost:6001/admin/Accounts");
@@ -49,6 +49,8 @@ const ManageAccounts = () => {
 
                         />
                     ))}
+                    <br />
+                    {/* <div className="discover">***Note: Click on an item to edit***</div> */}
                 </div>}
                 {loading && <div className="AccountsContainer"><div className='loading-spinner-admin'></div></div>}
             </div>
@@ -61,5 +63,5 @@ const ManageAccounts = () => {
 export default ManageAccounts
 // user_id SERIAL PRIMARY KEY NOT NULL,
 //     userName TEXT,
-//     accessRole TEXT,
+//      TEXT,
 //     campus_name TEXT,

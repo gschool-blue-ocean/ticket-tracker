@@ -19,7 +19,7 @@ const TicketHistory = () => {
         }
         fetchData()
     }, [])
-
+    
 
     const handleChange = (e) => {
         setText(e.target.value)
@@ -60,7 +60,7 @@ const TicketHistory = () => {
                                 .includes(text.toLowerCase()) ||
                             value.priority
                                 .toLowerCase()
-                                .includes(text.toLowerCase()) === 'Urgent'
+                                .includes(text.toLowerCase())
                         ) {
                             return value;
                         }

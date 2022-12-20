@@ -13,6 +13,7 @@ import ManageAccounts from "./Components/Admin/ManageAccounts";
 import TicketHistory from "./Components/Admin/TicketHistory";
 import SharedLayout from "./Pages/SharedLayout";
 
+import Faq from "./Pages/Faq";
 import Login from "./Pages/Login";
 import Admin from "./Pages/Admin";
 import User from "./Pages/User";
@@ -26,20 +27,21 @@ import ProtectedRoutes from "./Components/ProtectedRoutes";
 const App = () => {
   const { user } = useContext(LoginContext)
   const loggedIn = window.localStorage.getItem('isLoggedIn')
-
+console.log(window.localStorage)
 
   return (
     <Router>
-      <div className="App">
+      <div className="App" data-testid="Appjs">
 
         <Routes>
 
           <Route exact path="/" element={user.isAuth ? <ProtectedRoutes user={user} /> : <Login />} />
-
+            <Route exact path="/faq" element={<Faq />} />
           <Route exact path="/admin" element={user.isAuth ? <SharedLayout /> : <Navigate to='/' /> || loggedIn ? <SharedLayout /> : <Navigate to='/'/>}>
             <Route path="/admin/TicketHistory" element={<TicketHistory />} />
             <Route path="/admin/ManageAccounts" element={<ManageAccounts />} />
             <Route path="/admin/CreateAccount" element={<CreateAccount />} />
+            
           </Route>
 
           <Route exact path="/tech" element={user.isAuth ? <Tech /> : <Navigate to='/'/> || loggedIn ? <Tech /> : <Navigate to='/'/>}>

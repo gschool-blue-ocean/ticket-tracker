@@ -1,0 +1,84 @@
+details {
+    cursor: pointer;
+    background-color:white;
+    border: .3vh solid #0D0F4A;
+    border-radius: 10px;
+    padding: .5em .5em 0;
+    margin: 3vh;
+    color:  #0D0F4A
+}
+
+summary {
+    font-weight: bold;
+    margin: -.5em -.5em 0;
+    padding: .5em;
+}
+
+details[open] {
+    padding: .5em;
+}
+
+details[open] summary {
+    border-bottom: 1px solid #aaa;
+    margin-bottom: .5em;
+}
+
+
+
+
+
+
+
+.faq-header {
+    margin: 0;
+    padding: 0;
+    height: 10vh;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: right;
+    flex-direction: column;
+    align-content: center;
+    margin:3vh
+}
+
+.box {
+    position: relative;
+}
+
+.input {
+    padding: 10px;
+    width: 30px;
+    height: 30px;
+    background: none;
+    border: .3vh solid black;
+    border-radius: 50px;
+    box-sizing: border-box;
+    font-size: 12px;
+    color: black;
+    outline: none;
+    transition: .2s;
+}
+
+.box:hover input {
+    width: 350px;
+    background: white;
+    border-radius: 10px;
+}
+
+.fasfa-search {
+    position: absolute;
+    top: 50%;
+    left: 2vh;
+    transform: translate(-50%, -50%);
+    font-size: 12px;
+    color: black;
+    transition: 0s;
+}
+
+.box:hover .fasfa-search {
+    opacity: 0;
+    z-index: -1;
+}
+
+
+
