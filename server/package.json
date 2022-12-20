@@ -3,14 +3,18 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+  
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon server.js"
+    "test": "jest --coverage ",
+    "start": "nodemon server.js",
+    "servertest": "nodemon server.test.js",
+    "clearjest": " jest --clearCache"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@testing-library/jest-dom": "^5.16.5",
     "aws-sdk": "^2.1249.0",
     "bcrypt": "^5.1.0",
     "cors": "^2.8.5",
@@ -20,5 +24,24 @@
     "jsonwebtoken": "^8.5.1",
     "nodemon": "^2.0.20",
     "pg": "^8.8.0"
+  },
+  "devDependencies": {
+    "@babel/polyfill": "^7.12.1",
+    "@testing-library/react": "^13.4.0",
+    "babel-jest": "^29.3.1",
+    "jest": "^29.3.1",
+    "supertest": "^6.3.3"
+  },
+  "transform": {
+  
+  },
+  "jest": {
+    "moduleNameMapper": {
+      "axios": "axios/dist/node/axios.cjs",
+      "preset": "@vue/cli-plugin-unit-jest",
+      "transformIgnorePatterns": [
+        "node_modules/(?!axios)"
+      ]
+    }
   }
 }
