@@ -19,8 +19,8 @@ const TicketHistory = () => {
         }
         fetchData()
     }, [])
-
-
+    
+    console.log('ticket data', ticket)
     const handleChange = (e) => {
         setText(e.target.value)
 
@@ -61,6 +61,7 @@ const TicketHistory = () => {
                             value.priority
                                 .toLowerCase()
                                 .includes(text.toLowerCase())
+                            
                         ) {
                             return value;
                         }

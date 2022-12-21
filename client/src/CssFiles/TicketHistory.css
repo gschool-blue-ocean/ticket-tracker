@@ -1,5 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat&family=Roboto+Slab:wght@100;400&display=swap');
 
+ /* Galvanize Colors   
+    g-orange: #EA872D
+    g-green: #00808C
+  */ 
+  
 /* * {
     
     --offWhite: #ebf2fa;
@@ -38,10 +43,11 @@
     font-size: 1rem;
     margin-inline-start: 1rem;
     margin-top: 0.5rem;
-    padding-bottom: 0.5rem;
+    /* padding-bottom: 0.5rem; */
     font-family: 'Roboto Slab', serif;
     /* color: var(--gray); */
     color: black;
+    border-bottom: 2px solid black;
 }
 
 .ticket-div {
@@ -49,9 +55,36 @@
     height: 35px;
     text-align: center;
     padding-top: 0rem;
-    border: 2px solid var(--lowLight);
-    border-left: none;
-    border-top: none;
+}
+
+.ticket-div-num {
+    width: 10.5rem;
+    height: 35px;
+    text-align: center;
+    padding-top: 0rem;
+    text-decoration: underline;
+    color: blue;
+    background-color: rgb(165, 161, 161);
+    border: none;
+    cursor: pointer;
+    position: relative;
+}
+.ticket-info {
+    width: 400px;
+    position: absolute;
+    z-index: 1;
+    border: 2px solid black;
+    border-radius: 5px;
+    background-color: white;
+    color: black;
+    text-decoration: none;
+    padding: 10px;
+    text-align: left;
+    left: 100px;
+}
+
+#assigned-by, #ticket-descrip {
+    font-weight: bold;
 }
 
 .ticket-pri-red {
@@ -59,10 +92,26 @@
     height: 35px;
     text-align: center;
     padding-top: 0rem;
-    background-color: rgb(232, 32, 32);
-    border: 1px solid var(--lowLight);
+    font-size: 1.3rem;
+    color: rgb(184, 26, 26);
+    text-shadow: 1px 1px 1px black;
+    /* border: 1px solid var(--lowLight);
     border-left: none;
-    border-top: none;
+    border-top: none; */
+}
+
+.ticket-pri-orange {
+    width: 10.5rem;
+    height: 35px;
+    text-align: center;
+    padding-top: 0rem;
+    /* font-weight: bold; */
+    font-size: 1.3rem;
+    color: rgb(228, 157, 24);
+    text-shadow: 1px 1px 1px black;
+    /* border: 1px solid var(--lowLight);
+    border-left: none;
+    border-top: none; */
 }
 
 .ticket-pri-yellow {
@@ -70,10 +119,12 @@
     height: 35px;
     text-align: center;
     padding-top: 0rem;
-    background-color: rgba(233, 233, 30, 0.936);
-    border: 1px solid var(--lowLight);
+    font-size: 1.3rem;
+    color: rgba(233, 233, 30, 0.936);
+    text-shadow: 1px 1px 1px black;
+    /* border: 1px solid var(--lowLight);
     border-left: none;
-    border-top: none;
+    border-top: none; */
 }
 
 .ticket-pri-green {
@@ -81,10 +132,13 @@
     height: 35px;
     text-align: center;
     padding-top: 0rem;
-    background-color: rgb(16, 128, 16);
-    border: 1px solid var(--lowLight);
+    /* font-weight: bold; */
+    font-size: 1.3rem;
+    color: rgb(16, 128, 16);
+    text-shadow: 1px 1px 1px black;
+    /* border: 1px solid var(--lowLight);
     border-left: none;
-    border-top: none;
+    border-top: none; */
 }
 
 .adminSearch {

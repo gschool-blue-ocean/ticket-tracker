@@ -18,18 +18,23 @@
     "react-dropdown": "^1.11.0",
     "react-icons": "^4.6.0",
     "react-inline-editing": "^1.0.10",
+<<<<<<< HEAD
     "react-markdown": "^8.0.4",
+=======
+>>>>>>> 0dd56fe73bee144b435319c2838b50880c23a5da
     "react-router": "^6.4.3",
     "react-router-dom": "^6.4.3",
     "react-scripts": "5.0.1",
+    "react-test-renderer": "^18.2.0",
     "rsuite": "^5.22.0",
+    "serve": "^14.1.2",
     "web-vitals": "^2.1.4",
     "yup": "^0.32.11"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test",
+    "test": "react-scripts test --coverage",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
@@ -49,5 +54,14 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "jest": {
+    "moduleNameMapper": {
+      "axios": "axios/dist/node/axios.cjs",
+      "preset": "@vue/cli-plugin-unit-jest",
+      "transformIgnorePatterns": [
+        "node_modules/(?!axios)"
+      ]
+    }
   }
 }

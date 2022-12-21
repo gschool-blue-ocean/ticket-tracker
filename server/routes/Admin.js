@@ -16,7 +16,7 @@ adminRoute.get("/Accounts", async (req, res) => {
 
 adminRoute.get("/tickets", async (req, res) => {
   try {
-    const { rows } = await pool.query(" SELECT tickets.ticket_id,  tickets.category, tickets.priority, tickets.status, tickets.eta, campus.name FROM tickets JOIN campus ON tickets.campus_id = campus.campus_id;");
+    const { rows } = await pool.query(" SELECT tickets.ticket_id,  tickets.category, tickets.descrip, tickets.assigned, tickets.priority, tickets.status, tickets.eta, campus.name FROM tickets JOIN campus ON tickets.campus_id = campus.campus_id;");
     res.status(200).send(rows);
   } catch (err) {
     console.error(err.message);
@@ -53,11 +53,12 @@ adminRoute.post("/Accounts/create", async (req, res) => {
 
 adminRoute.patch("/Accounts/edit/:id", async (req, res) => {
   const { id } = req.params;
+  console.log(req.body, id)
   try {
-    const { userName } = req.body;
+    const { userName, emailInfo, accessRole, campusName } = req.body;
     const { rows } = await pool.query(
-      "UPDATE accounts SET userName = $1 WHERE user_id = $2 RETURNING *;",
-      [userName, id]
+      "UPDATE accounts SET userName = $1, email=$2, accessrole=$3, campus_name=$4 WHERE user_id = $5 RETURNING *;",
+      [userName, emailInfo, accessRole, campusName, id]
     );
     res.status(200).send(rows);
   } catch (err) {

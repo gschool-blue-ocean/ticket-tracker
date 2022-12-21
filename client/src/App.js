@@ -27,11 +27,11 @@ import ProtectedRoutes from "./Components/ProtectedRoutes";
 const App = () => {
   const { user } = useContext(LoginContext)
   const loggedIn = window.localStorage.getItem('isLoggedIn')
-
+console.log(window.localStorage)
 
   return (
     <Router>
-      <div className="App">
+      <div className="App" data-testid="Appjs">
 
         <Routes>
 
@@ -41,6 +41,7 @@ const App = () => {
             <Route path="/admin/TicketHistory" element={<TicketHistory />} />
             <Route path="/admin/ManageAccounts" element={<ManageAccounts />} />
             <Route path="/admin/CreateAccount" element={<CreateAccount />} />
+            
           </Route>
 
           <Route exact path="/tech" element={user.isAuth ? <Tech /> : <Navigate to='/'/> || loggedIn ? <Tech /> : <Navigate to='/'/>}>

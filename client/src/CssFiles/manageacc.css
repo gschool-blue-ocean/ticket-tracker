@@ -7,6 +7,10 @@
   
   } */
 
+   /* Galvanize Colors   
+    g-orange: #EA872D
+    g-green: #00808C
+  */
 
 
   .Header {
@@ -26,21 +30,59 @@
     margin: auto;
 }
 
-/* .AccountTable{
+#test-input {
+    background-color: rgb(165, 161, 161);
+    border: none;
+    height: 1.7rem;
+    position: relative;
+}
+#test-input-edit {
+    background-color: rgb(165, 161, 161);
+    border: 2px solid black;
+    height: 1.7rem;
+    position: relative;
+}
+.green-pencil {
+    color: rgb(9, 103, 9);
+}
+.red-pencil {
+    color: rgb(180, 17, 17);
+}
+.trash {
+    color: black;
+}
+.info-email {
+    border: 2px solid black;
+    border-radius: 10px;
+    padding: 3px;
+    background-color: white;
+    position: absolute;
+    z-index: 1;
+    left: 50px;
+}
+
+#test-input:hover {
+    color: rgb(92, 89, 89);
+}
+.discover {
+    text-align: center;
+}
+
+.AccountTable{
     width: 62rem;
     margin: 0;
-
+    border-bottom: 2px solid black;
     text-align: left;
-} */
+}
 
 /* .AccountTableCells{
     width: 14rem;
     border: 1px solid var(--lowLight);
-    font-size: 1rem; */
-/* background-color: white; */
-/* border-left: none; */
-/* border-right: none; */
-/* border-top: none;
+    font-size: 1rem; 
+    background-color: white;
+    border-left: none; 
+    border-right: none; 
+    border-top: none;
     height: 35px;
     font-family: 'Roboto Slab', serif;
     color: var(--gray);
@@ -90,12 +132,12 @@
 .AccountTableCells3,
 .AccountTableCells4 {
     width: 14rem;
-    border: 1px solid var(--lowLight);
+    /* border-bottom: 1px solid var(--lowLight); */
     font-size: 1rem;
     /* background-color: white; */
-    border-left: none;
+    /* border-left: none; */
     /* border-right: none; */
-    border-top: none;
+    /* border-top: none; */
     height: 35px;
     font-family: 'Roboto Slab', serif;
     color: var(--gray);
@@ -104,7 +146,7 @@
 
 .AccountTableCell5 {
     width: 6rem;
-    border: 1px solid var(--lowLight);
+    /* border: 1px solid var(--lowLight); */
     /* font-size: 1rem; */
     /* background-color: white; */
     border-left: none;
@@ -140,22 +182,22 @@
     width: 14rem;
     text-align: center;
     font-size: 1.5rem;
-    margin-inline-start: 5px;
     font-family: 'Primeform Pro';
 }
 
 .edit-Lables {
     /* -webkit-text-decoration: underline var(--highLight);
     text-decoration: underline var(--highLight); */
+    margin-inline-start: 2.2rem;
     font-size: 1.5rem;
     font-family: 'Primeform Pro';
-    margin-inline-start: 2.2rem;
     width: 3rem;
 }
 
 .AccountsContainer {
     overflow: overlay;
     height: 27rem;
+    
 }
 
 .AccountContainer {
@@ -164,9 +206,14 @@
     align-items: center;
     align-content: space-between;
     gap: 0.5rem;
+    
 }
 
 .editBTN:hover,
 .deleteBTN:hover {
     cursor: pointer;
+}
+
+.AccountLables {
+    background-color: rgb(165, 161, 161);
 }
