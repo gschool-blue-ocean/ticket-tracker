@@ -1,19 +1,10 @@
 details {
     cursor: pointer;
-<<<<<<< HEAD
     background-color: white;
     border: 1px solid #aaa;
     border-radius: 4px;
     padding: .5em .5em 0;
     margin: 10px;
-=======
-    background-color:white;
-    border: .3vh solid #0D0F4A;
-    border-radius: 10px;
-    padding: .5em .5em 0;
-    margin: 3vh;
-    color:  #0D0F4A
->>>>>>> 0dd56fe73bee144b435319c2838b50880c23a5da
 }
 
 summary {
@@ -55,24 +46,15 @@ details[open] summary {
 
 .input {
     padding: 10px;
-<<<<<<< HEAD
     width: 30vh;
     height: 30px;
     background: white;
     border: .3vh solid black;
     border-radius: 10px;
-=======
-    width: 30px;
-    height: 30px;
-    background: none;
-    border: .3vh solid black;
-    border-radius: 50px;
->>>>>>> 0dd56fe73bee144b435319c2838b50880c23a5da
     box-sizing: border-box;
     font-size: 12px;
     color: black;
     outline: none;
-<<<<<<< HEAD
     text-indent: 7%;
 }
 
@@ -84,17 +66,6 @@ details[open] summary {
 .create-faq{
     height: 20px;
 }
-=======
-    transition: .2s;
-}
-
-.box:hover input {
-    width: 350px;
-    background: white;
-    border-radius: 10px;
-}
-
->>>>>>> 0dd56fe73bee144b435319c2838b50880c23a5da
 .fasfa-search {
     position: absolute;
     top: 50%;
@@ -105,17 +76,10 @@ details[open] summary {
     transition: 0s;
 }
 
-<<<<<<< HEAD
 /* .box:hover .fasfa-search {
     opacity: 0;
     z-index: -1;
 } */
-=======
-.box:hover .fasfa-search {
-    opacity: 0;
-    z-index: -1;
-}
->>>>>>> 0dd56fe73bee144b435319c2838b50880c23a5da
 
 
 

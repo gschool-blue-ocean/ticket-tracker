@@ -1,6 +1,5 @@
 import React from "react";
 import { ReactDOM } from "react";
-<<<<<<< HEAD
 import ReactMarkdown from 'react-markdown';
 import Fuse from "fuse.js";
 import LoginContext from "../Contexts/loginContext";
@@ -29,37 +28,6 @@ const Faq = () => {
     keys: ["title", "summary", "id"],
     includeScore: true,
   });
-=======
-import Fuse from "fuse.js";
-import Header from "../Components/Admin/header";
-import { useState, useEffect, useContext, useRef } from "react";
-import axios from "axios";
-import { FiChevronDown } from "react-icons/fi";
-import "../CssFiles/faq.css";
-import { FaSearch } from "react-icons/fa";
-
-const Faq = ({ user }) => {
-  console.log("this is in faq", user);
-  const [faqList, setFaqList] = useState([]);
-
-  const [searchTerm, setSearchTerm] = useState("");
-
-  useEffect(() => {
-    const getDatatFromDB = async () => {
-      const { data } = await axios.get("http://localhost:6001/faq");
-      setFaqList(data);
-
-      console.log(data);
-    };
-    getDatatFromDB();
-  }, []);
-
-  const fuse = new Fuse(faqList, {
-    keys: ["title", "summary"],
-    includeScore: true,
-  });
-
->>>>>>> 0dd56fe73bee144b435319c2838b50880c23a5da
   const results = fuse.search(searchTerm);
   const faqResults = searchTerm
     ? results.map((results) => results.item)
@@ -69,7 +37,6 @@ const Faq = ({ user }) => {
     const value = e.target.value;
     console.log(value);
     setSearchTerm(value);
-<<<<<<< HEAD
   } 
   // updates database with new title/body when enter is pressed, and closes out edit mode
   const handleUpdate = function (divId, dataType) {
@@ -107,11 +74,6 @@ const Faq = ({ user }) => {
 
   return (
     
-=======
-  }
-
-  return (
->>>>>>> 0dd56fe73bee144b435319c2838b50880c23a5da
     <>
       <Header />
       <div className="faq-header">
@@ -119,13 +81,7 @@ const Faq = ({ user }) => {
           <form name="search">
             <input
               type="text"
-<<<<<<< HEAD
               class="input"              
-=======
-              class="input"
-              name="txt"
-              onmouseout="this.blur() this.placeholder=''"
->>>>>>> 0dd56fe73bee144b435319c2838b50880c23a5da
               value={searchTerm}
               placeholder="Search FAQs"
               onChange={handleSearch}
@@ -134,7 +90,6 @@ const Faq = ({ user }) => {
           <FaSearch className="fasfa-search"></FaSearch>
         </div>
       </div>
-<<<<<<< HEAD
       <button name="addFaq" className='create-faq' onClick={() => handleCreate()}>Add FAQ</button>
       {/* maps over articles that match search, defaults to all if no search is present */}
       {faqResults.slice(0).reverse().map((i) => {
@@ -166,22 +121,4 @@ const Faq = ({ user }) => {
     </>
   );
 };
-=======
-
-      {faqResults.map((i) => {
-        const { title, summary } = i;
-        return (
-          <>
-            <details>
-              <summary>{title}</summary>
-              {summary}
-            </details>
-          </>
-        );
-      })}
-    </>
-  );
-};
-
->>>>>>> 0dd56fe73bee144b435319c2838b50880c23a5da
 export default Faq;
