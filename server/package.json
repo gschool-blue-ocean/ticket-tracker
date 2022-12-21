@@ -7,8 +7,8 @@
   "scripts": {
     "test": "jest --coverage ",
     "start": "nodemon server.js",
-    "servertest": "nodemon server.test.js",
-    "clearjest": " jest --clearCache"
+    "servertest": "nodemon server.test.js"
+    
   },
   "keywords": [],
   "author": "",
@@ -34,14 +34,5 @@
   },
   "transform": {
   
-  },
-  "jest": {
-    "moduleNameMapper": {
-      "axios": "axios/dist/node/axios.cjs",
-      "preset": "@vue/cli-plugin-unit-jest",
-      "transformIgnorePatterns": [
-        "node_modules/(?!axios)"
-      ]
-    }
   }
 }

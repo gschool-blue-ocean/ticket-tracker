@@ -4,7 +4,7 @@ require('dotenv').config();
 
 
 const app = express();
-
+const liveServer = require('http').Server(app)
 const port = process.env.PORT || 6001
 
 const userRoute = require("./routes/User")
@@ -33,3 +33,5 @@ app.post('/test', authorizeToken);
 app.listen(port, () => {
   console.log(`listening on port ${port}`);
 });
+
+module.exports = liveServer
