@@ -20,6 +20,7 @@ const Header = () => {
                 <NavLink to="/admin/CreateAccount" className="NavBarComp"><AiOutlineUser /> Create Accout</NavLink>
                 <NavLink to="/admin/ManageAccounts" className="NavBarComp"><MdOutlineManageAccounts /> ManageAccounts</NavLink>
                 <NavLink to="/admin/TicketHistory" className="NavBarComp"><IoTicketOutline /> TicketHistory</NavLink>
+                <NavLink to='/FAQ' className='NavBarComp'>FAQ</NavLink>
                 <NavLink to="/" className="NavBarComp" onClick={handleLogOut}>
                         <BiLogOut /> Sign Out
                 </NavLink>
