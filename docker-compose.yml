@@ -1,9 +1,9 @@
 version: '3.7'
 services:
  server:
-  image: my-nodejs-app:latest
+  image: server:latest
  app:
-  image: frontend:latest
+  image: client:latest
  db:
   image: postgres
   environment:
