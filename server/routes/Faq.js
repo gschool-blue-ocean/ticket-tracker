@@ -17,11 +17,11 @@ faq.get('/', async (req, res) => {
 
 faq.post('/', async (req, res) => {
     try {
-        console.log(req.body)
-        const summary = req.body.summary
-        const title = req.body.title
-        const { rows } = await pool.query(`INSERT INTO faq(title, summary) VALUES('${title}', '${summary}')`)
-        res.send("submitted your request")
+        // console.log(req.body)
+        // const summary = ' '
+        // const title = ' '
+        const { rows } = await pool.query(`INSERT INTO faq (title, summary) VALUES(' ', ' ') returning *;`)
+        res.send(rows)
     } catch (err) {
         console.log(err)
     }
@@ -31,7 +31,7 @@ faq.post('/', async (req, res) => {
 faq.delete('/:id', async (req, res) => {
     try {
         const id = req.params.id
-      
+        console.log(id)
         const { rows } = await pool.query(`DELETE FROM faq WHERE id=${id}`)
         res.send("deleted")
     } catch (err) {
@@ -41,10 +41,10 @@ faq.delete('/:id', async (req, res) => {
 
 faq.patch("/", async (req, res) => {
      try {
-         const {id, summary, title} =  req.body
-      
-        const { rows } = await pool.query(`UPDATE faq SET summary=$1,title=$2 WHERE id=$3`, [summary,title,id])
-        res.send("updated")
+         const {id, column, value} =  req.body
+        // console.log(req.body, dataType)
+        const { rows } = await pool.query(`UPDATE faq SET ${column}='${value}' WHERE id=${id} returning *;`)
+    res.status(200).send(rows)
     } catch (err) {
         console.log(err)
     }
