@@ -31,8 +31,9 @@ details[open] summary {
 .faq-header {
     margin: 0;
     padding: 0;
-    height: 10vh;
-    display: flex;
+/* height: 10vh; */
+    width: 95vw;
+    display: inline-block;
     justify-content: space-evenly;
     align-items: right;
     flex-direction: column;
@@ -58,13 +59,9 @@ details[open] summary {
     text-indent: 7%;
 }
 
-/* .box:hover input {
-    width: 350px;
-    background: white;
-    border-radius: 10px;
-} */
 .create-faq{
     height: 20px;
+    float:right;
 }
 .fasfa-search {
     position: absolute;
@@ -76,10 +73,11 @@ details[open] summary {
     transition: 0s;
 }
 
-/* .box:hover .fasfa-search {
-    opacity: 0;
-    z-index: -1;
-} */
+.adminIcons {
+    float: right
+}
 
-
+.summary-input{
+    width: 100%;
+}
 

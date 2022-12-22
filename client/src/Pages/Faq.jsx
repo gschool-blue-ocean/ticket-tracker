@@ -7,7 +7,7 @@ import Header from "../Components/Admin/header";
 import { useState, useEffect, useContext, useRef } from "react";
 import axios from "axios";
 import "../CssFiles/faq.css";
-import { FaSearch, FaPencilAlt, FaTrash } from "react-icons/fa";
+import { FaSearch, FaPencilAlt, FaTrash, FaPlusSquare } from "react-icons/fa";
 //import { BsTrash } from "react-icons/bs"
 const Faq = () => {
   const { user } = useContext(LoginContext)
@@ -89,8 +89,9 @@ const Faq = () => {
           </form>
           <FaSearch className="fasfa-search"></FaSearch>
         </div>
+        <FaPlusSquare className='create-faq' onClick={() => handleCreate()}/>
       </div>
-      <button name="addFaq" className='create-faq' onClick={() => handleCreate()}>Add FAQ</button>
+      
       {/* maps over articles that match search, defaults to all if no search is present */}
       {faqResults.slice(0).reverse().map((i) => {
         const { title, summary, id } = i;
@@ -107,12 +108,12 @@ const Faq = () => {
               <summary>
               {/* toggles title between editable and not when edit button is clicked */}
               {editMode === true 
-              ? <input type='text' defaultValue={title} onKeyDown={handleUpdate(id, 'title')}></input> 
+              ? <input type='text' className='title-input' defaultValue={title} onKeyDown={handleUpdate(id, 'title')}></input> 
               : <ReactMarkdown>{title}</ReactMarkdown>}
               </summary>
                 {/* toggles body between editable and not when edit button is clicked  */}
                 {editMode === true 
-                ? <input type='text' defaultValue={summary} onKeyDown={handleUpdate(id, 'summary')}></input>
+                ? <input type='text' className='summary-input' defaultValue={summary} onKeyDown={handleUpdate(id, 'summary')}></input>
                 : <ReactMarkdown>{summary}</ReactMarkdown>}    
             </details>           
         );
